@@ -15,7 +15,8 @@ const Wrapper = styled.div`
 `;
 
 const StyledFormControl = styled(FormControl)`
-  width: 500px;
+  min-width: 300px;
+  width: 100%;
 `;
 
 const Palindrome = (props) => {
