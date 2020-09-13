@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
 
-import '../../../assets/App.css';
+import logo from '../../../assets/images/logo.svg';
+
+import Navigation from './Navigation';
+import { NAVIGATION_ITEMS } from './options';
+
+import '../../../assets/styles/App.css';
 
 const BodySection = styled.section`
   width: 100vw;
@@ -26,9 +31,16 @@ const BodySection = styled.section`
   }
 `;
 
-const PublicLayout = ({ children }) => {
+const PublicLayout = ({ children, isAuthenticated }) => {
   return (
     <>
+      <section>
+        <Navigation
+          logo={logo}
+          items={NAVIGATION_ITEMS}
+          isAuthenticated
+        />
+      </section>
       <BodySection>
         <div>
           {children}

@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import Routes from './Routes';
 
-import './assets/App.css';
+import './assets/styles/App.css';
 
 function App() {
   return (
