@@ -22,7 +22,6 @@ const caseToTitleCase = [
 describe('Palindrom Utils isPalindrome', () => {
   caseToTitleCase.forEach(item => {
     it(`${item.name}`, () => {
-      console.log(isPalindrome(item.input))
       should(isPalindrome(item.input)).be.equal(item.expected);
     });
   });
