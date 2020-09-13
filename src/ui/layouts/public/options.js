@@ -12,9 +12,9 @@ export const NAVIGATION_ITEMS = (() => {
       isPrivate: true,
     },
     {
-      name: 'change-cash',
-      title: 'change-cash',
-      path: '/palindrome',
+      name: 'cash-change',
+      title: 'Cash Change',
+      path: '/cash-change',
       isPrivate: true,
     }
   ];

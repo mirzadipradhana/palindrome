@@ -36,6 +36,7 @@ const Palindrome = (props) => {
   const handleReset = useCallback(() => {
     setResult(null);
     setError(null);
+    setInput(null);
   }, []);
 
   const handleChange = (e) => {
@@ -49,7 +50,7 @@ const Palindrome = (props) => {
         <h3>Palindrome Checker</h3>
         <StyledFormControl>
           <InputLabel htmlFor="my-input">Input Word or Sentence</InputLabel>
-          <Input id="my-input" onChange={handleChange} disabled={result || error} />
+          <Input id="palindrome-input" onChange={handleChange} disabled={result !== null || (error && error.message !== null)} />
           <Button onClick={result === null && error === null ? handleSumbit : handleReset}>
             {result === null && error === null ? 'Check' : 'Reset'}
           </Button>
@@ -72,7 +73,7 @@ const Palindrome = (props) => {
               <Divider />
               <Container>
                 <h3>Error:</h3>
-                {error}
+                {error.message}
               </Container>
             </>
           )
