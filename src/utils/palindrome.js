@@ -16,7 +16,7 @@ const sanitizeString = (input) => {
 
 export const isPalindrome = (input = '') => {
   if (typeof input !== 'string') {
-    throw 'The input should be string';
+    throw new Error('The input should be string');
   }
 
   const sanitizedInput = sanitizeString(input).toLowerCase();

@@ -1,5 +1,5 @@
 import should from 'should';
-import {INIT_CHANGE_MONEY, giveChange} from './cashChange';
+import {giveChange} from './cashChange';
 
 const caseToTitleCase = [
   {

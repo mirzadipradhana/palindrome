@@ -1,4 +1,5 @@
 import React from 'react'
+import Paper from '@material-ui/core/Paper';
 import styled from 'styled-components';
 
 import logo from '../../../assets/images/logo.svg';
@@ -8,27 +9,16 @@ import { NAVIGATION_ITEMS } from './options';
 
 import '../../../assets/styles/App.css';
 
-const BodySection = styled.section`
-  width: 100vw;
-  min-height: 100vh;
-  box-sizing: border-box;
-  background-color: rgb(255, 255, 255);
+const BodySection = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
+  margin: 12px 12px;
+  margin-top: 100px;
+  box-sizing: border-box;
+  width: calc(100vw - 24px) !important;
+`;
 
-  > div {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-
-    h1 {
-      margin: 0;
-    }
-  }
+const StyledPaper = styled(Paper)`
+  width: 100%;
 `;
 
 const PublicLayout = ({ children, isAuthenticated }) => {
@@ -42,9 +32,9 @@ const PublicLayout = ({ children, isAuthenticated }) => {
         />
       </section>
       <BodySection>
-        <div>
+        <StyledPaper>
           {children}
-        </div>
+        </StyledPaper>
       </BodySection>
     </>
   );

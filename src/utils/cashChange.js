@@ -48,7 +48,7 @@ const convertStringToNumber = (input, thousandSeparator = '.') => {
 
 export const giveChange = (input = '', money = INIT_CHANGE_MONEY) => {
   if (typeof input !== 'string' && typeof input !== 'number') {
-    throw 'The input should be string or number';
+    throw new Error('The input should be string or number');
   }
 
   let convertedInput = input
@@ -57,7 +57,7 @@ export const giveChange = (input = '', money = INIT_CHANGE_MONEY) => {
   if (typeof input === 'string') {
     convertedInput = convertStringToNumber(input)
     if (isNaN(convertedInput)) {
-      throw 'The input not recognized';
+      throw new Error('The input not recognized');
     }
   }
 
